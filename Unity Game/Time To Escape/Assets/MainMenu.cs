@@ -5,22 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+	[SerializeField] CTrackSwitcher ctMaster;
+	[SerializeField] Animator anim;
+
+	public void onFadeInComplete()
+	{
+		ctMaster.onFadeEnd();
+	}
 
 
-    public void Quitgame()
+	public void SetFaded(bool state)
+	{
+		anim.SetBool("isFaded", state);
+	}
 
-    {
-        Debug.Log("QUIT!");
-        Application.Quit();
-    }
+	public void Quitgame()
 
-    
-        
-    
-
-
+	{
+		Debug.Log("QUIT!");
+		Application.Quit();
+	}
 }
