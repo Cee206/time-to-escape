@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayDetection : MonoBehaviour
 {
+    
     public Animator doorAnimator; 
     // Start is called before the first frame update
     
