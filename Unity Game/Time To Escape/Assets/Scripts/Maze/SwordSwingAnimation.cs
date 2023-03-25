@@ -26,8 +26,8 @@ public class SwordSwingAnimation : MonoBehaviour
     IEnumerator SwordSwing()
     {
         Sword.GetComponent<Animator>().Play("SwordSwing");
-        yield return new WaitForSeconds(0.5f);
-        Sword.GetComponent<Animator>().Play("NewState");
+        yield return new WaitForSeconds(1.0f);
+        Sword.GetComponent<Animator>().Play("New State");
     }
 
 }
